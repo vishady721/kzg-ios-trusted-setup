@@ -1,1 +1,1 @@
-# kzg-trusted-setup
+# kzg-ios-trusted-setup
