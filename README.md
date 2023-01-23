@@ -1,1 +1,1 @@
-# kzg-ios-trusted-setup
+# swift-kzg-ios-client
