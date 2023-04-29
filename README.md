@@ -32,3 +32,5 @@ This project was used to contribute to the Ethereum KZG ceremony's special contr
 }
 ```
 
+# [Blog Post](./blog.md)
+
