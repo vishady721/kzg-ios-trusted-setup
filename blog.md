@@ -11,6 +11,22 @@ Our next challenge was the fact that our scalar multiplication was *way too slow
 # Entropy/Deletion
 We generate entropy using the `SecRandomCopyBytes` built-in Swift function with a length of 255 bits–one is generated for each power of tau. These are the values used to perform the scalar multiplication of the transcript. We then delete these in lines [1267-1270](https://github.com/vishady721/swift-kzg-ios-client/blob/f887690e80c6e9339db043c9c8397801f7c5dde5/srsly/srsly/ViewController.swift#L1267) of [ViewController.swift](./srsly/srsly/ViewController.swift) by setting each number value back to 0.
 
+# Contribution 
+
+This project was used to contribute to the Ethereum KZG ceremony's special contribution period on 04/16/2022 @ ~4:20 PDT. We used `0xdf369cde73ce4d75deba0d9a6f67873ea9350b9b` as the contributing address. The following is the full contribution receipt, including the witness PoT public keys, for contribution #83344 visible on the [ceremony website](https://ceremony.ethereum.org/):
+
+```javascript
+{
+  "identity": "eth|0xdf369cde73ce4d75deba0d9a6f67873ea9350b9b",
+  "witness": [
+    "0xb2c3a994728990489e9b4baccf2ca2d178478b8adb60e9d339bb8d6305d9a726e20be519208b03189c175d6b1e1231c81079cca38a8fef5b576b714225dab3e46241d18510b19de9639b84e136f3fef055a60ef610ba2daeaf6df03583b80665",
+    "0xb32320ac9ea45e0e7e83809e441166ff82fb55eaf5b617f04b7971c0972780f41ffab86d5e8b729c4886acf25212cd6102df3edee2367278370ffe71f7021d7abb4dc2b10fb01f965c34c02f249f93b2c2e1de250cd54c094be8561e004f0678",
+    "0xb9dcedee0b1467900783e50cdd08f9bc849af9cc9ae7f81df3aeecaaec2df83c68525c7fe90adf82a3e6999dad693c451166b3f5304258713dff5faf73ee4d7eedadc18ae80150fe44252b33f4820cb52feb6b1045db54668f2b3a5bd2654993",
+    "0x8a000e8d0c2a591585307e1a98558f7dbab8d6867297870d70c8d66efb4c72972b84f233bf6b2938c5c2b9d6d009489605a6b547b6aa91bdd0b3fb2c799ccd5774131c1e12d993cd25bf16b682e95c2616e90be0a7302a0b126dedaf16ced798"
+  ]
+}
+```
+
 # Next 
 We have several more steps and visions for the continuation of this project! The first is abstracting all of the BLS operations we programmed into its own importable package. This way, elliptic curve operations on BLS12-381 can be done in Swift apps by importing this package. On that note, adding a pairing check in this library would help in introducing a transcript verification component of the app–although given the processing limitations of a mobile device, it is unclear whether this could be computed in a reasonable amount of time given its complexity. 
 
