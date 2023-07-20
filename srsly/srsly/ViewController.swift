@@ -12,7 +12,7 @@ import SwiftyJSON
 import CryptoSwift
 //import BLS12381
 
-let SEQUENCER_URL = "http://bore.pub:45312"
+let SEQUENCER_URL = "https://seq.ceremony.ethereum.org"
 
 let q_ = BInt("1A0111EA397FE69A4B1BA7B6434BACD764774B84F38512BF6730D2A0F6B0F6241EABFFFEB153FFFFB9FEFFFFFFFFAAAB", radix: 16)!
 let r_ = BInt("73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001", radix: 16)!
